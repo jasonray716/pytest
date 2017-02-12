@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load eligible %}
+{% load bizzfuzz %}
+{%block body%}
+	<div class="panel panel-primary">
+		<div class="panel-heading">List accounts</div>
+		<div class="panel-body">
+			{%if not accounts%}
+			<p>No accounts</p>
+			{%endif%}
+
+			<div class="table-responsive">
+				<table class="table table-hover table-bordered">
+					<tr>
+						<th>Username</th>
+						<th>Birthday</th>
+						<th>Eligible</th>
+						<th>Random Number</th>
+						<th>BizzFuzz</th>
+						<th>Edit / Delete</th>
+					</tr>
+					{%for a in accounts%}
+					<tr>
+						<td>
+							<strong>{{a.username}}</strong>
+						</td>
+						<td>
+							<small>{{a.birthday}}</small>
+						</td>
+						<td>
+							{{ a.birthday | eligible }}
+						</td>
+						<td>
+							<small>{{a.num}}</small>
+						</td>
+						<td>
+							{{ a.num | bizzfuzz }}
+						</td>
+						<td>
+							<a href="/edit/{{a.id}}">Edit</a> / <a href="/delete/{{a.id}}">delete</a>
+						</td>
+						
+					</tr>
+					{%endfor%}
+				</table>
+				<a href="/new" class="btn btn-success pull-right"><span class="glyphicon .glyphicon-plus"></span> Add a new Account</a>
+			</div>
+		</div>
+	</div>
+
+{%endblock%}
