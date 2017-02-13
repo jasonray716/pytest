@@ -3,3 +3,5 @@
 account/**/*.pyc
 pytest/**/*.pyc
 
+#SQLite database file
+db.sqlite3
