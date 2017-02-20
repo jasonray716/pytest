@@ -1,4 +1,9 @@
-# Django demo app for the interview
+Django demo app for the interview
+=========
+
+[![build](https://travis-ci.org/nicholasli137/pytest.svg?branch=master)]
+(https://travis-ci.org/nicholasli137/pytest)
+
 
 ## Environment Setup
 
