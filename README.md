@@ -1,6 +1,6 @@
 # Django demo app for interview
 
-[![Build Status: Linux](https://travis-ci.org/nicholasli137/pytest.svg?branch=master)](https://travis-ci.org/nicholasli137/pytest)
+[![Build Status: Linux](https://travis-ci.org/trevordonnelly/pytest.svg?branch=master)](https://travis-ci.org/trevordonnelly/pytest)
 
 
 ## Environment Setup
@@ -15,7 +15,7 @@ source /pass/to/virtualenv/bin/activate
 ## Run webserver
 The next step is to clone the repository and install python packages.
 ```
-git clone https://github.com/nicholasli137/pytest.git
+git clone https://github.com/trevordonnelly/pytest.git
 cd pytest
 pip install -r requirements.txt
 ```
